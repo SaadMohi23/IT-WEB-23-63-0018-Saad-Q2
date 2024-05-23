@@ -1,0 +1,26 @@
+﻿@page
+@model Student_Courses_and_Info_Q2.Pages.AddCourseModel
+@{
+    ViewData["Title"] = "Add New Course Info";
+}
+
+<h1>Add New Course Information</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="CourseViewModel.Course_Name"></label>
+        <input asp-for="CourseViewModel.Course_Name" class="form-control" />
+        <span asp-validation-for="CourseViewModel.Course_Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="CourseViewModel.Lecturer_Name"></label>
+        <input asp-for="CourseViewModel.Lecturer_Name" class="form-control" />
+        <span asp-validation-for="CourseViewModel.Lecturer_Name" class="text-danger"></span>
+    </div> 
+    <br />
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
